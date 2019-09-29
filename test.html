@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*.box{*/
+        /*    background: #f00;*/
+        /*    position: absolute;*/
+        /*    !*top: 50%;*!*/
+        /*    !*left: 50%;*!*/
+        /*    !*transform: translate(-50%,-50%);*!*/
+        /*    !*top: 0;*!*/
+        /*    !*left: 0;*!*/
+        /*    !*bottom: 0;*!*/
+        /*    !*right: 0;*!*/
+        /*    !*margin: auto;*!*/
+        /*}*/
+    </style>
+</head>
+<body>
+<!--    <div class="box">-->
+<!--        asdfalskdjfl;ajsdf;lajsdfl;kjasl;kdfjl;aksdjflkasdjl;kajsdfk;lajkl;sdfjka;lsd-->
+<!--    </div>-->
+<!--    <form action="" name="buyForm" method="post">-->
+<!--        <input type="checkbox" value="paozhu">-->
+<!--        <input type="checkbox" value="paozhu">-->
+<!--        <input type="checkbox" value="paozhu">-->
+<!--    </form>-->
+<!--<button>全选</button>-->
+<!--<button>全不选</button>-->
+</body>
+<script>
+    // var y = 10;
+    // if(!(x in window)){
+    //     var x = 10;
+    // }else{
+    //     ++y;
+    // }
+    // alert(x);
+    // alert(y);
+
+    // var a = {n:1};
+    // var b = 2;
+    // a = {n:2};
+    // a.x = a;
+    // console.log(a.x);
+    // console.log(b.x);
+
+    // setTimeout(()=>{
+    //     console.log('a',0);
+    // });
+    // var p = new Promise((resolve)=>{
+    //     console.log('b');
+    //     resolve();
+    // });
+    // p.then(()=>{
+    //     console.log('c');
+    // });
+    // p.then(()=>{
+    //     console.log('d');
+    // });
+    // console.log('e');
+
+    // window.color = 'red';
+    // var o = {color: 'blue'};
+    // function sayColor (){
+    //     alert(this.color);
+    // }
+    // sayColor();
+    // sayColor.call(this);
+    // sayColor.call(window);
+    // sayColor.call(o);
+
+    // let btn = document.querySelectorAll('button');
+    // btn[0].onclick = selectAll;
+    // btn[1].onclick = cancleSelectAll;
+    //
+    // let form = document.querySelector('form');
+    // let inputs = form.children;
+    // //全选
+    // function selectAll(){
+    //     Array.from(inputs).forEach(item=>item.setAttribute('checked','checked'));
+    // }
+    // //全不选
+    // function cancleSelectAll(){
+    //     Array.from(inputs).forEach(item=>item.removeAttribute('checked'));
+    // }
+
+    // let str = 'c/dir1/dir2';
+    // let result = str.split('/').splice(1,2).reverse().toString();
+    //
+    // function count(){
+    //     let count = 0;
+    //     let timer;
+    //     function f(){
+    //         console.log(count++);
+    //         if(count==5){
+    //             clearInterval(timer);
+    //         }
+    //     }
+    //     timer = setInterval(f,1000)
+    // }
+    // count();
+
+    // let arr = [1,2,3];
+    // let obj = {a:1};
+    // console.log(arr instanceof Array);
+    // console.log(obj instanceof Object);
+
+    // function Test1(name){
+    //     this.name = name;
+    //     return {name:'jack'};
+    // }
+    // var a = new Test1('rose');
+    // console.log('b1='+a.name);
+    //
+    // function Test2(name){
+    //      this.name = name;
+    //      return 'jack';
+    // }
+    // var a = new Test2('rose');
+    // console.log('b2='+a.name);
+
+    // let str = 'abcdefg';
+    // console.log(str.slice(3, 1));
+
+    // var a = 1;
+    // console.log(a[1]);
+
+    let nums = [0,1,2,3,4,5,6];
+    let i = 3;
+    let j = 6;
+    let newArr = nums.slice(i,j+1);
+    function main(i,j,arr){
+        console.log(arr);//[3, 4, 5, 6]
+        let sum = 0;
+        let index = 0;//4
+        function sumRange(item1,item2){
+            sum += item2;//3+4+5+6
+            if(++index < arr.length){//1<4 2<4 3<4
+                sumRange(sum,arr[index]);
+            }
+        }
+        if(arr.length == 1){
+            console.log(arr[0])
+        }else{
+            sumRange(0,arr[0]);
+            console.log(sum);
+        }
+    }
+    main(i,j,newArr);
+
+</script>
+</html>

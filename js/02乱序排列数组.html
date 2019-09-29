@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // let arr = [1,2,3,4,5,6,7,8];
+    // function randomSort (arr){
+    //     let length = arr.length;
+    //     while(length>1){
+    //         let index = Math.floor(Math.random()*length--);
+    //         [arr[length],arr[index]] = [arr[index],arr[length]]
+    //     }
+    //     return arr;
+    // }
+    // console.log(randomSort(arr));
+
+    // let arr = [1,2,3,4,5,6,7,8];
+    // function randomSort (arr){
+    //     let length = arr.length;
+    //     while(length>1){
+    //         let index = Math.floor(Math.random()*length--);
+    //         [arr[index],arr[length]] = [arr[length],arr[index]];
+    //     }
+    //     return arr;
+    // }
+    // console.log(randomSort(arr));
+
+    // let arr = [1,2,3,4,5,6,7,8];
+    // function randomSort (){
+    //     let length = arr.length;
+    //     while(length>1){
+    //         let index = Math.floor(Math.random()*length--);
+    //         [arr[index],arr[length]] = [arr[length],arr[index]];
+    //     }
+    //     return arr;
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    let arr = [1,2,3,4,5,6,7,8];
+    function randomSort(arr){
+        let length = arr.length;
+        while(length>1){
+            let index = Math.floor(Math.random()*length--);
+            [arr[length],arr[index]] = [arr[index],arr[length]];
+        }
+        return arr;
+    }
+    console.log(randomSort(arr));
+</script>
+</html>

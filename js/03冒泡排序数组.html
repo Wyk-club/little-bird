@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // let arr = [1,54,3,5,634,345,6];
+    // function sort (arr){
+    //     for(let i=0; i<arr.length-1; i++){
+    //         for(let j=i+1; j<arr.length; j++){
+    //             let itemI = arr[i];
+    //             let itemJ = arr[j];
+    //             if(itemI>itemJ){
+    //                 arr[i] = itemJ;
+    //                 arr[j] = itemI;
+    //             }
+    //         }
+    //     }
+    //     return arr;
+    // }
+    // console.log(sort(arr));
+
+    let arr = [1,54,3,5,634,345,6];
+    function sort (arr){
+        for(let i=0; i<arr.length-1; i++){
+            for(let j=i+1; j<arr.length; j++){
+                let itemI = arr[i];
+                let itemJ = arr[j];
+                if(itemI>itemJ){
+                    arr[i] = itemJ;
+                    arr[j] = itemI;
+                }
+            }
+        }
+        return arr;
+    }
+    console.log(sort(arr));
+</script>
+</html>

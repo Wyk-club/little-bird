@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="box">
+        <p>第一个p标签</p>
+        <p>第二个p标签</p>
+        <p>第三个p标签</p>
+        <h1>第一个标题标签</h1>
+        <h2>第二个标题标签</h2>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    // 概要
+    // :eq()
+    // :first :last
+    // :not()
+    // :even :odd
+    // :gt() :lt()
+    // :header
+
+    //1, :eq(index) 在匹配的集合中选择索引值对应的元素
+    // $('p:eq(0)').css('color','#f00');
+
+    //2, :first/:last 在匹配的集合中选择第一个/最后一个元素
+    // $('p:first').css('color','#f00');
+    // $('p:last').css('color','#f00');
+
+    //3, :not(css语法) 在匹配的集合中,除去一部分元素
+    // $('p:not(".box p:first-child")').css('color','#f00');
+
+    //4, :even/:odd 在匹配的集合中,选择索引为偶数/奇数的元素
+    // $('p:even').css('color','#f00');
+    // $('p:odd').css('color','#409eff');
+
+    //5, :gt(index)/:lt(index) 在匹配的集合中,选择索引值大于/小于某个值的元素
+    // $('p:gt(1)').css('color','#ff0');
+    // $('p:lt(1)').css('color','#f00');
+
+    //6, :header 在匹配的集合中,选中所有的标题标签
+    $(':header').css('color','#f00');
+</script>
+</html>

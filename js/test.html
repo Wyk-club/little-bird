@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var name = 'Animal';
+    var obj = {
+        name: 'Dog',
+        does: function(){
+            this.name = 'does';
+            return function(){
+                return this.name;
+            }
+        }
+    };
+    console.log(obj.does().call(this));
+</script>
+</html>
